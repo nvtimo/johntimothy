@@ -9,110 +9,75 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:#0a0a0a;
+    background:#0b0b0b;
     color:white;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 header{
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-    url("https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=2070");
-    background-size:cover;
-    background-position:center;
-    padding:120px 20px;
+    background:#000;
+    padding:60px 20px;
     text-align:center;
 }
 
 header h1{
-    font-size:55px;
+    font-size:50px;
     color:#00e0ff;
     margin:0;
 }
 
 header h2{
     margin:10px 0;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#00e0ff;
-    color:black;
-    margin:10px;
-    border-radius:5px;
-    font-weight:bold;
-    text-decoration:none;
+    font-weight:normal;
 }
 
 section{
-    padding:60px 20px;
     max-width:1200px;
     margin:auto;
+    padding:40px 20px;
 }
 
-h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#00e0ff;
+.car-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
 }
 
-.car-card{
+.car{
     background:#111;
-    padding:20px;
     border-radius:10px;
-    margin-bottom:40px;
+    overflow:hidden;
+    transition:0.3s;
 }
 
-.car-card h3{
-    color:#00ff99;
+.car:hover{
+    transform:scale(1.03);
 }
 
-.gallery{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.car img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.gallery img{
-    width:48%;
-    border-radius:8px;
-}
-
-.specs{
-    margin-top:15px;
-    background:#1a1a1a;
+.car-info{
     padding:15px;
-    border-radius:8px;
+}
+
+.car-info h3{
+    color:#00ff99;
+    margin:0 0 10px 0;
 }
 
 .price{
-    font-size:20px;
-    color:#00ff99;
+    color:#00e0ff;
+    font-weight:bold;
     margin-top:10px;
 }
 
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    display:inline-block;
-    margin:10px;
-    padding:10px 20px;
-    background:#00e0ff;
-    color:black;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
 footer{
-    background:black;
     text-align:center;
     padding:20px;
+    background:#000;
     margin-top:40px;
 }
 </style>
@@ -124,113 +89,108 @@ footer{
 <h2>RevNation PH Presents</h2>
 <h1>TAKUMI AUTO COLLECTION</h1>
 <p>Owner: John Timothy Taguiam</p>
-<a href="#collection" class="btn">Explore Collection</a>
-<a href="#contact" class="btn">Contact Us</a>
 </header>
 
-<section id="collection">
-<h2>JDM Car Collection</h2>
+<section>
+<div class="car-grid">
 
-<!-- NISSAN -->
-<div class="car-card">
+<!-- 1 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1542365889-4b2b3c94a43a?q=80&w=1200">
+<div class="car-info">
 <h3>Nissan GT-R R34</h3>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1542365889-4b2b3c94a43a">
-<img src="https://images.unsplash.com/photo-1603386329225-868f9c3b1f56">
-<img src="https://images.unsplash.com/photo-1619767886558-efdc259b6e72">
-<img src="https://images.unsplash.com/photo-1593941707882-a56bbc8df2e1">
-</div>
-<div class="specs">
-Horsepower: 280 HP<br>
+HP: 280 HP<br>
 Engine: RB26DETT Twin Turbo<br>
-Transmission: 6-Speed Manual<br>
-Drive: AWD<br>
-Interior: Racing Bucket Seats<br>
-</div>
+Transmission: 6-Speed Manual
 <div class="price">₱8,500,000</div>
 </div>
+</div>
 
-<!-- TOYOTA -->
-<div class="car-card">
+<!-- 2 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1200">
+<div class="car-info">
+<h3>Toyota Supra MK5</h3>
+HP: 382 HP<br>
+Engine: 3.0L Turbo Inline-6<br>
+Transmission: 8-Speed Auto
+<div class="price">₱4,200,000</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c2284e5c1?q=80&w=1200">
+<div class="car-info">
 <h3>Toyota Supra MK4</h3>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1605559424843-9e4c2284e5c1">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
-<img src="https://images.unsplash.com/photo-1511910849309-0dffb8785146">
-</div>
-<div class="specs">
-Horsepower: 320 HP<br>
+HP: 320 HP<br>
 Engine: 2JZ-GTE Twin Turbo<br>
-Transmission: 6-Speed Manual<br>
-Drive: RWD<br>
-Interior: Black Leather Sport
-</div>
+Transmission: 6-Speed Manual
 <div class="price">₱2,800,000</div>
 </div>
+</div>
 
-<!-- HONDA -->
-<div class="car-card">
-<h3>Honda Civic Type R FK8</h3>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1617469165786-8007eda3e4c4">
-<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
-<img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023">
-<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d">
-</div>
-<div class="specs">
-Horsepower: 306 HP<br>
-Engine: 2.0L Turbo VTEC<br>
-Transmission: 6-Speed Manual<br>
-Drive: FWD<br>
-Interior: Red Racing Seats
-</div>
+<!-- 4 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1617469165786-8007eda3e4c4?q=80&w=1200">
+<div class="car-info">
+<h3>Honda NSX</h3>
+HP: 290 HP<br>
+Engine: 3.0L V6 VTEC<br>
+Transmission: 5-Speed Manual
 <div class="price">₱3,500,000</div>
 </div>
+</div>
 
-<!-- MAZDA -->
-<div class="car-card">
+<!-- 5 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1200">
+<div class="car-info">
+<h3>Honda Civic EK Hatchback</h3>
+HP: 160 HP<br>
+Engine: B16A VTEC<br>
+Transmission: 5-Speed Manual
+<div class="price">₱750,000</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
+<div class="car-info">
 <h3>Mazda RX-7 FD</h3>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-<img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
-<img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8">
-</div>
-<div class="specs">
-Horsepower: 276 HP<br>
+HP: 276 HP<br>
 Engine: 13B Rotary Twin Turbo<br>
-Transmission: 5-Speed Manual<br>
-Drive: RWD<br>
-Interior: Classic JDM
-</div>
+Transmission: 5-Speed Manual
 <div class="price">₱3,000,000</div>
 </div>
-
-<!-- SUBARU -->
-<div class="car-card">
-<h3>Subaru WRX STI</h3>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-</div>
-<div class="specs">
-Horsepower: 310 HP<br>
-Engine: 2.5L Turbo Boxer<br>
-Transmission: 6-Speed Manual<br>
-Drive: AWD<br>
-Interior: STI Sport Trim
-</div>
-<div class="price">₱2,400,000</div>
 </div>
 
-</section>
+<!-- 7 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1597000470138-4c5b3a89ce0f?q=80&w=1200">
+<div class="car-info">
+<h3>Mitsubishi Lancer Evolution (Old & New)</h3>
+HP: 291 HP<br>
+Engine: 4G63 / 4B11T Turbo<br>
+Transmission: 6-Speed Manual
+<div class="price">₱2,500,000</div>
+</div>
+</div>
 
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<a href="https://www.youtube.com" target="_blank">YouTube</a>
-<a href="https://www.instagram.com" target="_blank">Instagram</a>
-<a href="https://www.facebook.com" target="_blank">Facebook</a>
-<a href="mailto:takumiautocollection@email.com">Email Us</a>
+<!-- 8 -->
+<div class="car">
+<img src="https://images.unsplash.com/photo-1511910849309-0dffb8785146?q=80&w=1200">
+<div class="car-info">
+<h3>Subaru BRZ / Toyota 86</h3>
+HP: 228 HP<br>
+Engine: 2.4L Boxer Engine<br>
+Transmission: 6-Speed Manual
+<div class="price">₱2,100,000</div>
+</div>
+</div>
+
+</div>
 </section>
 
 <footer>
@@ -239,4 +199,5 @@ Interior: STI Sport Trim
 
 </body>
 </html>
+
 
